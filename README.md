@@ -122,25 +122,4 @@ jobfit-ai-bot/
 - Temporary files auto-deleted after 24 hours
 - No data stored permanently
 
-## 🤝 Contributing
-
-Contributions welcome! Feel free to:
-- Report bugs
-- Suggest features
-- Submit pull requests
-
-## 📄 License
-
-MIT License - free for personal and commercial use
-
-## 🙏 Acknowledgments
-
-- [Google Gemini](https://ai.google.dev/) for AI API
-- [Telegram Bot API](https://core.telegram.org/bots)
-- Google's Gemini Flash models
-
-=======
->>>>>>> 55ac328aecdd37400e599b0970935f672a2e56ca
----
-
-**Made with ❤️ for recruiters and job seekers**
+**Made with ❤️**
