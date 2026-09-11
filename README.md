@@ -113,29 +113,6 @@ jobfit-ai-bot/
 └── temp/              # Temporary files
 ```
 
-## 🔒 Security
-
-- API keys stored in `.env` (not committed)
-- Temporary files auto-deleted after 24 hours
-- No data stored permanently
-
-## 🤝 Contributing
-
-Contributions welcome! Feel free to:
-- Report bugs
-- Suggest features
-- Submit pull requests
-
-## 📄 License
-
-MIT License - free for personal and commercial use
-
-## 🙏 Acknowledgments
-
-- [Groq](https://groq.com) for free AI API
-- [Telegram Bot API](https://core.telegram.org/bots)
-- Meta's Llama models
-
 ---
 
 **Made with ❤️ for recruiters and job seekers**
