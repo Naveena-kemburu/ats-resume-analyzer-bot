@@ -115,6 +115,7 @@ jobfit-ai-bot/
 └── temp/                   # Temporary files
 ```
 
+<<<<<<< HEAD
 ## 🔒 Security
 
 - API keys stored in `.env` (not committed)
@@ -138,6 +139,8 @@ MIT License - free for personal and commercial use
 - [Telegram Bot API](https://core.telegram.org/bots)
 - Google's Gemini Flash models
 
+=======
+>>>>>>> 55ac328aecdd37400e599b0970935f672a2e56ca
 ---
 
 **Made with ❤️ for recruiters and job seekers**
