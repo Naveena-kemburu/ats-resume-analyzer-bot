@@ -26,17 +26,18 @@ pip install -r requirements.txt
 2. Send `/newbot` and follow instructions
 3. Copy the bot token
 
-**Groq API (FREE):**
-1. Visit [console.groq.com/keys](https://console.groq.com/keys)
-2. Sign up (free)
-3. Create API key
+**Google Gemini API (FREE tier available):**
+1. Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
+2. Sign in with your Google account
+3. Click "Create API Key"
+4. Copy the API key
 
 ### 3. Configure
 
 Create `.env` file:
 ```env
 TELEGRAM_BOT_TOKEN=your_telegram_token
-GROQ_API_KEY=your_groq_api_key
+GEMINI_API_KEY=your_gemini_api_key
 ```
 
 ### 4. Run
@@ -86,8 +87,8 @@ Python, FastAPI, PostgreSQL, Git
 ## 🛠️ Tech Stack
 
 - **Bot Framework:** python-telegram-bot
-- **AI Models:** Groq (Llama 3.3 70B)
-- **PDF Processing:** PyPDF2
+- **AI Models:** Google Gemini (Flash models)
+- **PDF/DOCX Processing:** PyPDF2, python-docx
 - **Language:** Python 3.10+
 
 ## 📋 Commands
@@ -103,14 +104,15 @@ Python, FastAPI, PostgreSQL, Git
 
 ```
 jobfit-ai-bot/
-├── bot.py              # Main Telegram bot
-├── groq_service.py     # AI analysis service
-├── formatter.py        # Output formatting
-├── cleanup.py          # File cleanup
-├── config.py           # Configuration
-├── requirements.txt    # Dependencies
-├── .env               # API keys (gitignored)
-└── temp/              # Temporary files
+├── bot.py                  # Main Telegram bot
+├── gemini_service.py       # Google Gemini AI service
+├── file_extractor.py       # PDF/DOCX text extraction
+├── formatter.py            # Output formatting
+├── cleanup.py              # File cleanup
+├── config.py               # Configuration
+├── requirements.txt        # Dependencies
+├── .env                    # API keys (gitignored)
+└── temp/                   # Temporary files
 ```
 
 ## 🔒 Security
@@ -132,9 +134,9 @@ MIT License - free for personal and commercial use
 
 ## 🙏 Acknowledgments
 
-- [Groq](https://groq.com) for free AI API
+- [Google Gemini](https://ai.google.dev/) for AI API
 - [Telegram Bot API](https://core.telegram.org/bots)
-- Meta's Llama models
+- Google's Gemini Flash models
 
 ---
 
