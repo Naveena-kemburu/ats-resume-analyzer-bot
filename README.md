@@ -1,124 +1,141 @@
-# JobFit AI - Telegram Resume Matcher Bot
+# JobFit AI - ATS Resume Analyzer Bot
 
-AI-powered ATS resume analysis bot that compares resumes against job descriptions using Google's Gemini AI.
+🤖 AI-powered Telegram bot that analyzes resumes against job descriptions using advanced language models.
 
-## Features
+## 🎯 Features
 
-- **ATS Score** - Comprehensive scoring based on skills, experience, keywords, projects, and structure
-- **Job Match %** - Precise percentage match between resume and job requirements
-- **Skill Analysis** - Detailed breakdown of matching, missing, and partial skills
-- **Learning Recommendations** - Personalized course suggestions for missing skills
-- **Candidate Ranking** - Automatic ranking of multiple candidates
-- **Multi-Resume Support** - Analyze multiple resumes in one session
+- **📊 ATS Score** - Comprehensive scoring (0-100) based on skills, experience, keywords, projects
+- **💼 Job Match %** - Precise percentage match between resume and job requirements  
+- **✅ Skill Analysis** - Detailed breakdown of matching, missing, and partial skills
+- **📚 Learning Recommendations** - Personalized course suggestions for missing skills
+- **🏆 Candidate Ranking** - Automatic ranking when analyzing multiple resumes
+- **📄 Multi-Resume Support** - Analyze and compare multiple candidates
 
-## Quick Start
+## 🚀 Quick Start
 
-### Prerequisites
+### 1. Install Dependencies
 
-- Python 3.8+
-- Telegram account
-- Google Gemini API key
-
-### Installation
-
-1. **Clone and navigate to the project:**
-```bash
-git clone <your-repo>
-cd jobfit-ai
-```
-
-2. **Install dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Configure your API keys in `.env`:**
-```
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token
-GEMINI_API_KEY=your_gemini_api_key
+### 2. Get API Keys
+
+**Telegram Bot:**
+1. Open [@BotFather](https://t.me/botfather) in Telegram
+2. Send `/newbot` and follow instructions
+3. Copy the bot token
+
+**Groq API (FREE):**
+1. Visit [console.groq.com/keys](https://console.groq.com/keys)
+2. Sign up (free)
+3. Create API key
+
+### 3. Configure
+
+Create `.env` file:
+```env
+TELEGRAM_BOT_TOKEN=your_telegram_token
+GROQ_API_KEY=your_groq_api_key
 ```
 
-### Running the Bot
+### 4. Run
 
 ```bash
 python bot.py
 ```
 
-You should see:
+## 📱 Usage
+
+1. Start the bot: `/start`
+2. Send job description (text)
+3. Upload PDF resumes (one or multiple)
+4. Analyze: `/analyze`
+5. Get detailed reports and rankings!
+
+## 🎨 Example Output
+
 ```
-INFO - Bot started successfully (Gemini enabled)!
+━━━━━━━━━━━━━━━━━━━━
+🏆 RANK #1
+👤 John Doe
+━━━━━━━━━━━━━━━━━━━━
+
+🎯 ATS SCORE
+85/100
+█████████████████░░░░
+
+💼 JOB MATCH
+78%
+███████████████░░░░░
+
+✅ MATCHING SKILLS
+Python, FastAPI, PostgreSQL, Git
+
+❌ MISSING SKILLS
+🔴 Docker
+🔴 AWS
+
+📚 RECOMMENDED LEARNING
+1. 🔥 Docker
+   → Containers basics
+   → Dockerfile creation
+   → Docker Compose
 ```
 
-## How to Use
+## 🛠️ Tech Stack
 
-### Step 1: Start a new session
-Open your bot in Telegram and send:
-```
-/start
-```
+- **Bot Framework:** python-telegram-bot
+- **AI Models:** Groq (Llama 3.3 70B)
+- **PDF Processing:** PyPDF2
+- **Language:** Python 3.10+
 
-### Step 2: Send Job Description
-You can provide the Job Description in three ways:
-- Upload a Word document (`.docx`)
-- Upload a PDF document (`.pdf`)
-- Or paste the text directly
-
-### Step 3: Upload Resumes
-Upload one or multiple resumes (`.pdf` or `.docx` files).
-
-### Step 4: Analyze
-When ready, send:
-```
-/analyze
-```
-
-### Step 5: Review Results
-The bot will analyze each resume against the Job Description and provide:
-- Individual candidate reports with ATS score, match %, strengths, weaknesses, and learning recommendations
-- Final ranking comparing all candidates
-
-## Commands
+## 📋 Commands
 
 | Command | Description |
-|---|---|
-| `/start` | Start new analysis session |
-| `/help` | Show usage instructions |
-| `/status` | View currently loaded JD and queued resumes |
-| `/jd` | View current Job Description preview and source |
-| `/clear` | Clear uploaded resumes while keeping active JD |
-| `/analyze` | Process uploaded resumes |
-| `/reset` | Clear current session |
+|---------|-------------|
+| `/start` | Start new analysis |
+| `/help` | Show help |
+| `/analyze` | Process resumes |
+| `/reset` | Clear session |
 
-## Analysis Output
-
-For each candidate, you will receive:
-- ATS Score (0-100)
-- Job Match Percentage
-- Matching skills
-- Missing skills (Critical / Important / Nice-to-have)
-- Skill breakdown with percentages
-- Strengths and areas to improve
-- Prioritized learning recommendations
-
-## Project Structure
+## 🏗️ Project Structure
 
 ```
-jobfit-ai/
-├── bot.py                 # Main Telegram bot
-├── gemini_service.py      # Gemini API integration
-├── file_extractor.py      # PDF & DOCX text extraction
-├── formatter.py           # Output formatting
-├── cleanup.py             # File management
-├── config.py              # Configuration
-├── requirements.txt       # Dependencies
-├── .env                   # API keys (not in git)
-├── .env.example           # Template
-├── .gitignore             # Git ignore rules
-└── temp/                  # Temporary file storage
+jobfit-ai-bot/
+├── bot.py              # Main Telegram bot
+├── groq_service.py     # AI analysis service
+├── formatter.py        # Output formatting
+├── cleanup.py          # File cleanup
+├── config.py           # Configuration
+├── requirements.txt    # Dependencies
+├── .env               # API keys (gitignored)
+└── temp/              # Temporary files
 ```
 
-## Security Notes
+## 🔒 Security
 
-- API keys are stored in `.env` (never commit this file)
-- Temporary files are auto-deleted after 24 hours
-- File uploads are processed securely in local temporary storage
+- API keys stored in `.env` (not committed)
+- Temporary files auto-deleted after 24 hours
+- No data stored permanently
+
+## 🤝 Contributing
+
+Contributions welcome! Feel free to:
+- Report bugs
+- Suggest features
+- Submit pull requests
+
+## 📄 License
+
+MIT License - free for personal and commercial use
+
+## 🙏 Acknowledgments
+
+- [Groq](https://groq.com) for free AI API
+- [Telegram Bot API](https://core.telegram.org/bots)
+- Meta's Llama models
+
+---
+
+**Made with ❤️ for recruiters and job seekers**
