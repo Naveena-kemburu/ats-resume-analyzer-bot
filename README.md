@@ -1,6 +1,8 @@
-# JobFit AI - ATS Resume Analyzer Bot
+# Hashira - ATS Resume Analyzer Bot
 
-🤖 AI-powered Telegram bot that analyzes resumes against job descriptions using advanced language models.
+🤖 AI-powered Telegram bot that analyzes resumes against job descriptions using Google Gemini AI.
+
+**Try it now:** [@jobfit_resume_bot](https://t.me/jobfit_resume_bot)
 
 ## 🎯 Features
 
@@ -48,11 +50,12 @@ python bot.py
 
 ## 📱 Usage
 
-1. Start the bot: `/start`
-2. Send job description (text)
-3. Upload PDF resumes (one or multiple)
-4. Analyze: `/analyze`
-5. Get detailed reports and rankings!
+1. Open [@jobfit_resume_bot](https://t.me/jobfit_resume_bot) in Telegram
+2. Start the bot: `/start`
+3. Send job description (text, PDF, or DOCX)
+4. Upload PDF/DOCX resumes (one or multiple)
+5. Analyze: `/analyze`
+6. Get detailed reports and rankings!
 
 ## 🎨 Example Output
 
@@ -122,4 +125,6 @@ jobfit-ai-bot/
 - Temporary files auto-deleted after 24 hours
 - No data stored permanently
 
-**Made with ❤️**
+**Hashira - Made with ❤️ for recruiters and job seekers**
+
+**Bot:** [@jobfit_resume_bot](https://t.me/jobfit_resume_bot)
